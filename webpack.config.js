@@ -3,16 +3,16 @@ const CleanPlugin = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/MyPlace.js",
+  entry: { MyPlace: "./src/MyPlace.js" },
   output: {
-    filename: "MyPlace.js",
+    filename: "[name].js", // name refference
     path: path.resolve(__dirname, "dist", "assets", "scripts"),
-    publicPath: "/dist/assets/scripts/",
+    publicPath: "assets/scripts/", //publicpath will be from html file
   },
   devServer: {
     compress: true,
     port: 9001,
-    contentBase: "./",
+    contentBase: "./dist",
     watchContentBase: true,
     watchOptions: {
       poll: true,

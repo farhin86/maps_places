@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build:prod": "webpack --config webpack.config.prod.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,11 @@
     "eslint": "^7.10.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.2.1",
+    "regenerator-runtime": "^0.13.3"
   }
 }

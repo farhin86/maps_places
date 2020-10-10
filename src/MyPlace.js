@@ -41,6 +41,7 @@ class PlaceFinder {
     }`;
   }
   getUserLocationHandler() {
+    console.log("Farhin");
     const modal = new Modal("loading-modal-content", "Something went wrong");
     modal.show();
     navigator.geolocation.getCurrentPosition((successResult) => {
